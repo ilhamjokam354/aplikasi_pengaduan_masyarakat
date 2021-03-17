@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Mar 2021 pada 02.12
+-- Waktu pembuatan: 17 Mar 2021 pada 17.00
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -48,6 +48,7 @@ INSERT INTO `masyarakat` (`nik`, `nama`, `username`, `password`, `telp`) VALUES
 ('35236565', 'nungki', 'nungki', '058723ae8e8e08e635b970d96b601231d07175d106f6a925bdc8259c544f8fd9', '08453225'),
 ('37808372542', 'user', 'user', '04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb', '0856121212'),
 ('37823547812442', 'abdul', 'abdul', '27652cad4994c0cc628413940eeb56600c86cfc35447c3c775d67610bb27aa61', '083857692818'),
+('42354532132', 'imam', 'imam', 'dbf5584beb6deac6a248b11a97b4043906882f30b66a0327a1b75123e7da6676', '0826424682'),
 ('5326546', 'oke', 'oke', 'b13c0ea15587743a7971f9266557adce3406f98ddaf51d03c29de255eae16606', '08954345');
 
 -- --------------------------------------------------------
@@ -71,9 +72,6 @@ CREATE TABLE `pengaduan` (
 --
 
 INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `judul_laporan`, `isi_laporan`, `foto`, `status`) VALUES
-(6, '2021-02-27', '3523451121', 'Jalan Rusak di Tuban', 'Mohon admin ditindaklanjuti, di desa perbon banyak jalan yang rusak', 'sobatambyar.jpg', 'selesai'),
-(7, '2021-02-27', '25364783324', 'Coba Kali', 'Halo Gimana', 'hp2004.jpg', 'proses'),
-(9, '2021-03-04', '37808372542', 'Hujan deras', 'halo admin hujan deras di kabupaten tuban bagaimana cara menaanggulanginya', 'start up.jpg', 'selesai'),
 (10, '2021-03-04', '3523451121', 'Kecelakaan ', 'Kecelakaan Di tambak boyo', 'Money-Heist.png', '0'),
 (11, '2021-03-05', '37823547812442', 'Koruptor Harus Dihukum Mati', 'halo admin. saya mempunyai pendapat bahwa koruptor harus dihukum mati', 'maxresdefault.jpg', 'selesai'),
 (12, '2021-03-05', '37823547812442', 'Jalan masih banyak bergelombang', 'Halo admin, tolong sampaikan masih banyak jalan bergelombang di tuban', 'unnamed.jpg', '0'),
@@ -81,8 +79,9 @@ INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `judul_laporan`
 (14, '2021-03-05', '32656767787', 'Internet Mahal', 'Halo admin, mohon diadukan masalah internet mahal dan terkadang lemot', 'maxresdefault.jpg', 'selesai'),
 (15, '2021-03-06', '35236565', 'Kecelakaan Merakurak', 'halo admin, mohon bantuanya. ada kecelakaan parah', 'rapid-tes-di-terminal_169.jpeg', 'selesai'),
 (16, '2021-03-06', '12345678', 'banjir', 'banjir bandang dan sumbangan belum sampai,di tangan masyarakat\r\nkenapa??\r\nada apa??\r\ndi korupsikah???', 'unnamed.jpg', 'selesai'),
-(26, '2021-03-11', '12345678', 'coba lagi lah', 'coba testing', 'Money-Heist.png', 'selesai'),
-(27, '2021-03-11', '25364783324', 'ISP makin mahal', 'halo admin, ', 'premanpensiunsangjuara_landscape.jpg', 'proses');
+(27, '2021-03-11', '25364783324', 'ISP makin mahal', 'halo admin, ', 'premanpensiunsangjuara_landscape.jpg', 'proses'),
+(28, '2021-03-16', '12345678', 'Banjir bandang di jakarta barat ', 'halo mohon untuk pemerintah supaya menanggulangi dengan sigap', '064242000_1577883977-IMG-20200101-0053.jpg', 'selesai'),
+(29, '2021-03-17', '42354532132', 'Pemerintah kurang peka dalam menangani narkoba', 'menurut saya pemerintah masih belum bisa menangani masalah narkoba, karena setiap tahun nya masih banyak kasus', 'obat-ilegal_ratio-16x9.jpg', 'selesai');
 
 -- --------------------------------------------------------
 
@@ -127,14 +126,13 @@ CREATE TABLE `tanggapan` (
 --
 
 INSERT INTO `tanggapan` (`id_tanggapan`, `id_pengaduan`, `tgl_tanggapan`, `tanggapan`, `id_petugas`) VALUES
-(9, 26, '2021-03-11', 'oke laporan anda akan kami proses secepatnnya, terimakasih telah melapor', 13),
-(10, 6, '2021-03-11', 'terimakasih telah melapor, laporan anda akan kami proses', 13),
 (11, 15, '2021-03-11', 'terimakasih telah melapor, aduan kamu akan kami lanjutkan ke lembaga terkait', 13),
 (12, 14, '2021-03-11', 'terimakasih telah melapor, aduan kamu akan kami lanjutkan ke lembaga terkait', 13),
 (13, 11, '2021-03-11', 'terimakasih telah melapor, aduan kamu akan kami lanjutkan ke lembaga terkait', 13),
 (14, 16, '2021-03-11', 'terimakasih telah melapor, aduan kamu akan kami lanjutkan ke lembaga terkait', 13),
-(15, 9, '2021-03-11', 'terimakasih telah melapor, aduan kamu akan kami lanjutkan ke lembaga terkait', 13),
-(16, 13, '2021-03-11', 'laporan kami terima, pengaduan akan kami proses secepatnya\r\n', 15);
+(16, 13, '2021-03-11', 'laporan kami terima, pengaduan akan kami proses secepatnya ^IL\r\n', 13),
+(17, 28, '2021-03-16', 'pengaduan kami terima, aduan kamu akan kami teruskan ke lembaga terkait', 13),
+(18, 29, '2021-03-17', 'Pengaduan kami terima, pengaduan akan di teruskan ke lembaga terkait', 13);
 
 -- --------------------------------------------------------
 
@@ -271,19 +269,19 @@ ALTER TABLE `tanggapan`
 -- AUTO_INCREMENT untuk tabel `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `tanggapan`
 --
 ALTER TABLE `tanggapan`
-  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
