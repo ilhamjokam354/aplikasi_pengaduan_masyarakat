@@ -1,0 +1,10 @@
+#marker{
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 4px;
+}
